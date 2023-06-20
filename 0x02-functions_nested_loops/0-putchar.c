@@ -14,5 +14,6 @@ write(1, "c", 1);
 write(1, "h", 1);
 write(1, "a", 1);
 write(1, "r", 1);
+
 return (0);
 }
