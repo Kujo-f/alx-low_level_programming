@@ -7,6 +7,10 @@
  * Return: Always 0 (success)
  */
 int main(void)
+
+/* 
+ * Description: Prints "_putchar" followed by a new line
+ */
 {
 write(1, "_", 1);
 write(1, "p", 1);
