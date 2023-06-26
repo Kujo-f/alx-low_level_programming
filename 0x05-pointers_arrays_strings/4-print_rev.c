@@ -1,22 +1,26 @@
 #include "main.h"
 
-/**
- * function prints a string in reverse
+/*
+ * the function print a string in reverse
  */
-void print_rev(char *s) {
+void print_rev(char *s) 
+{
     int length = 0;
-    
-    /*Calculate the length of the string*/
+    int i;
+    /* Calculate the length of the string*/
     while (s[length] != '\0') 
     {
         length++;
     }
-    
-    /*Print the string in reverse order*/
-    for (int i = length - 1; i >= 0; i--) 
+
+    i  = length - 1;
+
+    while (i >= 0) 
     {
         _putchar(s[i]);
+        i--;
     }
-    
+   
     _putchar('\n');
 }
+
