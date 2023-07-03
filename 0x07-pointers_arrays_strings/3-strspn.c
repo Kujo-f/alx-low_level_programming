@@ -28,11 +28,10 @@ unsigned int _strspn(char *s, char *accept)
 			a++;
 		}
 
-		if (isAccepted)
-			length++;
-		else
+		if (!isAccepted)
 			break;
 
+		length++;
 		s++;
 	}
 
