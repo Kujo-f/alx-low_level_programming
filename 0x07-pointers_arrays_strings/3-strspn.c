@@ -17,7 +17,8 @@ unsigned int _strspn(char *s, char *accept)
 		isAccepted = 0;
 
 		/* Iterate through the accept string to check if *s is accepted */
-		char *a = accept;
+                char *a;
+		*a = accept;
 		while (*a != '\0')
 		{
 			if (*s == *a)
