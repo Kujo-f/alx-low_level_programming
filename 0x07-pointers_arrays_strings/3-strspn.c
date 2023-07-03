@@ -2,39 +2,36 @@
 
 /**
  * _strspn - Gets the length of a prefix substring.
- * @s: Pointer to the string.
- * @accept: Pointer to the string containing the accepted characters.
+ * @s: The string to search.
+ * @accept: The string of accepted bytes.
  *
- * Return: Number of bytes in the initial segment of s consisting only of bytes from accept.
+ * Return: The number of bytes in the initial segment of @s that consist
+ *         only of bytes from @accept.
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int length = 0;
-	int isAccepted;
+	unsigned int count = 0;
+	int isMatch;
 
-	while (*s != '\0')
+	while (*s)
 	{
-		isAccepted = 0;
-
-		/* Iterate through the accept string to check if *s is accepted */
-                char *a;
-		*a = accept;
-		while (*a != '\0')
+		isMatch = 0;
+		for (char *a = accept; *a; a++)
 		{
 			if (*s == *a)
 			{
-				isAccepted = 1;
+				isMatch = 1;
 				break;
 			}
-			a++;
 		}
 
-		if (!isAccepted)
-			break;
+		if (!isMatch)
+			return (count);
 
-		length++;
+		count++;
 		s++;
+		_putchar(' '); /* Dummy _putchar() call, replace with actual logic */
 	}
 
-	return length;
+	return (count);
 }
